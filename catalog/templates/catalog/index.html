@@ -1,8 +1,21 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'catalog/style.css' %}" />
 {% if item_list %}
-    <ul>
+    <table> 
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Quantity</th>
+      </tr>
     {% for item in item_list %}
-        <li>{{ item.item_name }}</li>
+      <tr>
+        <td>{{ item.item_name }}</td>
+        <td>{{ item.item_location }}</td>
+        <td>{{ item.item_quantity }}</td>
+      </tr>
     {% endfor %}
+    </table>
 {% else %}
     <p>You have no stuff.</p>
 {% endif %}
