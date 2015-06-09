@@ -7,12 +7,16 @@
         <th>Name</th>
         <th>Location</th>
         <th>Quantity</th>
+		<th>Size</th>
+		<th>Color</th>
       </tr>
     {% for item in item_list %}
       <tr>
         <td>{{ item.item_name }}</td>
         <td>{{ item.item_location }}</td>
         <td>{{ item.item_quantity }}</td>
+        <td>{{ item.item_size }}</td>
+        <td>{{ item.item_color }}</td>
       </tr>
     {% endfor %}
     </table>
